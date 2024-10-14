@@ -1,0 +1,207 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1827 ]
+[d frameptr 6 ]
+"10 /opt/microchip/xc8/v2.46/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 /opt/microchip/xc8/v2.46/pic/sources/c99/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 /opt/microchip/xc8/v2.46/pic/sources/c99/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"39 /home/andre/MPLABXProjects/tp5.X/main.c
+[v _main main `(i  1 e 2 0 ]
+"40 /home/andre/MPLABXProjects/tp5.X/mcc_generated_files/comparator/src/cmp1.c
+[v _CMP1_Initialize CMP1_Initialize `(v  1 e 1 0 ]
+"52
+[v _CMP1_Enable CMP1_Enable `(v  1 e 1 0 ]
+"78
+[v _CMP1_InterruptCallbackRegister CMP1_InterruptCallbackRegister `(v  1 e 1 0 ]
+"86
+[v _CMP1_DefaultInterruptCallback CMP1_DefaultInterruptCallback `(v  1 s 1 CMP1_DefaultInterruptCallback ]
+"43 /home/andre/MPLABXProjects/tp5.X/mcc_generated_files/fvr/src/fvr.c
+[v _FVR_Initialize FVR_Initialize `(v  1 e 1 0 ]
+"39 /home/andre/MPLABXProjects/tp5.X/mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+"40 /home/andre/MPLABXProjects/tp5.X/mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+"62
+[v _INT_CallBack INT_CallBack `(v  1 e 1 0 ]
+"71
+[v _INT_SetInterruptHandler INT_SetInterruptHandler `(v  1 e 1 0 ]
+"75
+[v _INT_DefaultInterruptHandler INT_DefaultInterruptHandler `(v  1 e 1 0 ]
+"38 /home/andre/MPLABXProjects/tp5.X/mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"39 /home/andre/MPLABXProjects/tp5.X/mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+[s S206 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1827.h
+[s S215 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S220 . 1 `S206 1 . 1 0 `S215 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES220  1 e 1 @11 ]
+[s S65 . 1 `uc 1 CCP2IF 1 0 :1:0 
+`uc 1 . 1 0 :2:1 
+`uc 1 BCL1IF 1 0 :1:3 
+`uc 1 EEIF 1 0 :1:4 
+`uc 1 C1IF 1 0 :1:5 
+`uc 1 C2IF 1 0 :1:6 
+`uc 1 OSFIF 1 0 :1:7 
+]
+"631
+[u S73 . 1 `S65 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES73  1 e 1 @18 ]
+"1152
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1214
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+[s S171 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1478
+[s S180 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S185 . 1 `S171 1 . 1 0 `S180 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES185  1 e 1 @149 ]
+"1648
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"1706
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2039
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"2096
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2158
+[v _CM1CON0 CM1CON0 `VEuc  1 e 1 @273 ]
+[s S35 . 1 `uc 1 C1SYNC 1 0 :1:0 
+`uc 1 C1HYS 1 0 :1:1 
+`uc 1 C1SP 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 C1POL 1 0 :1:4 
+`uc 1 C1OE 1 0 :1:5 
+`uc 1 C1OUT 1 0 :1:6 
+`uc 1 C1ON 1 0 :1:7 
+]
+"2175
+[u S44 . 1 `S35 1 . 1 0 ]
+[v _CM1CON0bits CM1CON0bits `VES44  1 e 1 @273 ]
+"2215
+[v _CM1CON1 CM1CON1 `VEuc  1 e 1 @274 ]
+[s S56 . 1 `uc 1 MC1OUT 1 0 :1:0 
+`uc 1 MC2OUT 1 0 :1:1 
+]
+"2415
+[u S59 . 1 `S56 1 . 1 0 ]
+[v _CMOUTbits CMOUTbits `VES59  1 e 1 @277 ]
+"2430
+[v _BORCON BORCON `VEuc  1 e 1 @278 ]
+"2457
+[v _FVRCON FVRCON `VEuc  1 e 1 @279 ]
+[s S121 . 1 `uc 1 ADFVR0 1 0 :1:0 
+`uc 1 ADFVR1 1 0 :1:1 
+`uc 1 CDAFVR0 1 0 :1:2 
+`uc 1 CDAFVR1 1 0 :1:3 
+`uc 1 TSRNG 1 0 :1:4 
+`uc 1 TSEN 1 0 :1:5 
+`uc 1 FVRRDY 1 0 :1:6 
+`uc 1 FVREN 1 0 :1:7 
+]
+"2478
+[s S130 . 1 `uc 1 ADFVR 1 0 :2:0 
+`uc 1 CDAFVR 1 0 :2:2 
+]
+[u S133 . 1 `S121 1 . 1 0 `S130 1 . 1 0 ]
+[v _FVRCONbits FVRCONbits `VES133  1 e 1 @279 ]
+"2861
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2913
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3487
+[v _WPUA WPUA `VEuc  1 e 1 @524 ]
+"3516
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"5792
+[v _IOCBP IOCBP `VEuc  1 e 1 @916 ]
+"5862
+[v _IOCBN IOCBN `VEuc  1 e 1 @917 ]
+"5932
+[v _IOCBF IOCBF `VEuc  1 e 1 @918 ]
+"36 /home/andre/MPLABXProjects/tp5.X/mcc_generated_files/comparator/src/cmp1.c
+[v _CMP1_InterruptHandler CMP1_InterruptHandler `*.37(v  1 s 2 CMP1_InterruptHandler ]
+"38 /home/andre/MPLABXProjects/tp5.X/mcc_generated_files/system/src/interrupt.c
+[v _INT_InterruptHandler INT_InterruptHandler `*.37(v  1 e 2 0 ]
+"39 /home/andre/MPLABXProjects/tp5.X/main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"64
+} 0
+"39 /home/andre/MPLABXProjects/tp5.X/mcc_generated_files/system/src/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"46
+} 0
+"38 /home/andre/MPLABXProjects/tp5.X/mcc_generated_files/system/src/pins.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"94
+} 0
+"40 /home/andre/MPLABXProjects/tp5.X/mcc_generated_files/system/src/interrupt.c
+[v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
+{
+"50
+} 0
+"71
+[v _INT_SetInterruptHandler INT_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v INT_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"73
+} 0
+"43 /home/andre/MPLABXProjects/tp5.X/mcc_generated_files/fvr/src/fvr.c
+[v _FVR_Initialize FVR_Initialize `(v  1 e 1 0 ]
+{
+"47
+} 0
+"40 /home/andre/MPLABXProjects/tp5.X/mcc_generated_files/comparator/src/cmp1.c
+[v _CMP1_Initialize CMP1_Initialize `(v  1 e 1 0 ]
+{
+"50
+} 0
+"78
+[v _CMP1_InterruptCallbackRegister CMP1_InterruptCallbackRegister `(v  1 e 1 0 ]
+{
+[v CMP1_InterruptCallbackRegister@callbackHandler callbackHandler `*.37(v  1 p 2 0 ]
+"84
+} 0
+"39 /home/andre/MPLABXProjects/tp5.X/mcc_generated_files/system/src/clock.c
+[v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
+{
+"46
+} 0
+"52 /home/andre/MPLABXProjects/tp5.X/mcc_generated_files/comparator/src/cmp1.c
+[v _CMP1_Enable CMP1_Enable `(v  1 e 1 0 ]
+{
+"55
+} 0

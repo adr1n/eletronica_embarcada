@@ -1,0 +1,50 @@
+### HEXMate logfile and output summary ###
+
+### Command-line arguments ###
+ /tmp/xcXIcJOJF/driver_tmp_3.o
+ -Odist/default/debug/tp3_andre_221007822.X.debug.hex
+ -logfile=dist/default/debug/tp3_andre_221007822.X.debug.hxl
+ -addressing=2
+
+### Memory Usage ###
+ Input file ranges:
+  200h - 2C7h		(/tmp/xcXIcJOJF/driver_tmp_3.o)
+  800h - 821h		(/tmp/xcXIcJOJF/driver_tmp_3.o)
+  FFAh - FFFh		(/tmp/xcXIcJOJF/driver_tmp_3.o)
+  400Eh - 4011h		(/tmp/xcXIcJOJF/driver_tmp_3.o)
+ Unused ranges:
+  0h - 1FFh
+  2C8h - 7FFh
+  822h - FF9h
+  1000h - 400Dh
+
+### Hex Memory Map ###
+ Legend:
+  -- = Unused memory
+  H1 = Input file             (/tmp/xcXIcJOJF/driver_tmp_3.o)
+----------------------------------------------------------
+         | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+----------------------------------------------------------
+00000200 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000210 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000220 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000230 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000240 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000250 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000260 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000270 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000280 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000290 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000002A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000002B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+000002C0 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
+----------------------------------------------------------
+00000800 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000810 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000820 | H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- -- --
+----------------------------------------------------------
+00000FF0 | -- -- -- -- -- -- -- -- -- -- H1 H1 H1 H1 H1 H1
+----------------------------------------------------------
+00004000 | -- -- -- -- -- -- -- -- -- -- -- -- -- -- H1 H1
+00004010 | H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- -- --
+00004020 | --

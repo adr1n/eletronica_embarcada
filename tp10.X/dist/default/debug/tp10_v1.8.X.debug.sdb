@@ -1,0 +1,824 @@
+[p GLOBOPT AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1827 ]
+[d frameptr 6 ]
+"73 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/spi1.c
+[e E92 . `uc
+SPI1_DEFAULT 0
+]
+"63 /home/andre/MPLABXProjects/tp10_v1.8.X/main.c
+[e E2499 . `uc
+spiCS1 0
+spiCS2 1
+]
+"263
+[e E2392 . `uc
+SPI1_DEFAULT 0
+]
+"42 /opt/microchip/xc8/v2.46/pic/sources/c90/common/altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+"62 /opt/microchip/xc8/v2.46/pic/sources/c90/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+[v i1___ftpack __ftpack `(f  1 e 3 0 ]
+"254 /opt/microchip/xc8/v2.46/pic/sources/c90/common/frexp.c
+[v _frexp frexp `(d  1 e 3 0 ]
+"86 /opt/microchip/xc8/v2.46/pic/sources/c90/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+[v i1___ftadd __ftadd `(f  1 e 3 0 ]
+"4 /opt/microchip/xc8/v2.46/pic/sources/c90/common/ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 /opt/microchip/xc8/v2.46/pic/sources/c90/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 /opt/microchip/xc8/v2.46/pic/sources/c90/common/ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"17 /opt/microchip/xc8/v2.46/pic/sources/c90/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 /opt/microchip/xc8/v2.46/pic/sources/c90/common/fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"28 /opt/microchip/xc8/v2.46/pic/sources/c90/common/lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"6 /opt/microchip/xc8/v2.46/pic/sources/c90/common/round.c
+[v _round round `(d  1 e 3 0 ]
+"13 /opt/microchip/xc8/v2.46/pic/sources/c90/common/trunc.c
+[v _trunc trunc `(d  1 e 3 0 ]
+"6 /opt/microchip/xc8/v2.46/pic/sources/c90/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"52 /home/andre/MPLABXProjects/tp10_v1.8.X/main.c
+[v _matrixClear matrixClear `(v  1 e 1 0 ]
+[v i1_matrixClear matrixClear `(v  1 e 1 0 ]
+"67
+[v _initMatrix initMatrix `(v  1 e 1 0 ]
+"84
+[v _positionCalc positionCalc `(v  1 e 1 0 ]
+"110
+[v _positionUpdate positionUpdate `(v  1 e 1 0 ]
+"129
+[v _txSpi txSpi `(v  1 e 1 0 ]
+[v i1_txSpi txSpi `(v  1 e 1 0 ]
+"150
+[v _rxSpi rxSpi `(v  1 e 1 0 ]
+"171
+[v _analisaRx analisaRx `(v  1 e 1 0 ]
+"190
+[v _executaTudo executaTudo `(v  1 e 1 0 ]
+"202
+[v _Ext_Write Ext_Write `(v  1 e 1 0 ]
+"212
+[v _Ext_Read Ext_Read `(v  1 e 1 0 ]
+"225
+[v _decrementaT decrementaT `(v  1 e 1 0 ]
+"245
+[v _main main `(v  1 e 1 0 ]
+"66 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+"99
+[v _EUSART_is_rx_ready EUSART_is_rx_ready `(uc  1 e 1 0 ]
+"113
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+"132
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+"144
+[v _EUSART_DefaultFramingErrorHandler EUSART_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+"146
+[v _EUSART_DefaultOverrunErrorHandler EUSART_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+"154
+[v _EUSART_DefaultErrorHandler EUSART_DefaultErrorHandler `(v  1 e 1 0 ]
+"157
+[v _EUSART_SetFramingErrorHandler EUSART_SetFramingErrorHandler `(v  1 e 1 0 ]
+"161
+[v _EUSART_SetOverrunErrorHandler EUSART_SetOverrunErrorHandler `(v  1 e 1 0 ]
+"165
+[v _EUSART_SetErrorHandler EUSART_SetErrorHandler `(v  1 e 1 0 ]
+"52 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+"50 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"62
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"72
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+"55 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"62 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/spi1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+"72
+[v _SPI1_Open SPI1_Open `(uc  1 e 1 0 ]
+"92
+[v _SPI1_ExchangeByte SPI1_ExchangeByte `(uc  1 e 1 0 ]
+"100
+[v _SPI1_ExchangeBlock SPI1_ExchangeBlock `(v  1 e 1 0 ]
+[v i1_SPI1_ExchangeBlock SPI1_ExchangeBlock `(v  1 e 1 0 ]
+"122
+[v _SPI1_ReadBlock SPI1_ReadBlock `(v  1 e 1 0 ]
+"63 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"113
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+"64 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"119
+[v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
+"132
+[v _TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
+"136
+[v _TMR2_DefaultInterruptHandler TMR2_DefaultInterruptHandler `(v  1 e 1 0 ]
+[s S490 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1827.h
+[s S499 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S504 . 1 `S490 1 . 1 0 `S499 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES504  1 e 1 @11 ]
+[s S81 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"570
+[u S90 . 1 `S81 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES90  1 e 1 @17 ]
+"752
+[v _TMR1 TMR1 `VEus  1 e 2 @22 ]
+"759
+[v _TMR1L TMR1L `VEuc  1 e 1 @22 ]
+"779
+[v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
+"799
+[v _T1CON T1CON `VEuc  1 e 1 @24 ]
+[s S403 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+`uc 1 TMR1CS0 1 0 :1:6 
+`uc 1 TMR1CS1 1 0 :1:7 
+]
+"821
+[s S412 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 TMR1CS 1 0 :2:6 
+]
+[u S416 . 1 `S403 1 . 1 0 `S412 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES416  1 e 1 @24 ]
+"871
+[v _T1GCON T1GCON `VEuc  1 e 1 @25 ]
+[s S433 . 1 `uc 1 T1GSS0 1 0 :1:0 
+`uc 1 T1GSS1 1 0 :1:1 
+`uc 1 T1GVAL 1 0 :1:2 
+`uc 1 T1GGO 1 0 :1:3 
+`uc 1 T1GSPM 1 0 :1:4 
+`uc 1 T1GTM 1 0 :1:5 
+`uc 1 T1GPOL 1 0 :1:6 
+`uc 1 TMR1GE 1 0 :1:7 
+]
+"891
+[s S442 . 1 `uc 1 T1GSS 1 0 :2:0 
+]
+[u S444 . 1 `S433 1 . 1 0 `S442 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES444  1 e 1 @25 ]
+"941
+[v _TMR2 TMR2 `VEuc  1 e 1 @26 ]
+"961
+[v _PR2 PR2 `VEuc  1 e 1 @27 ]
+"981
+[v _T2CON T2CON `VEuc  1 e 1 @28 ]
+[s S618 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+`uc 1 T2CKPS1 1 0 :1:1 
+`uc 1 TMR2ON 1 0 :1:2 
+`uc 1 T2OUTPS0 1 0 :1:3 
+`uc 1 T2OUTPS1 1 0 :1:4 
+`uc 1 T2OUTPS2 1 0 :1:5 
+`uc 1 T2OUTPS3 1 0 :1:6 
+]
+"1002
+[s S626 . 1 `uc 1 T2CKPS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 T2OUTPS 1 0 :4:3 
+]
+[u S630 . 1 `S618 1 . 1 0 `S626 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES630  1 e 1 @28 ]
+"1152
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1214
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+[s S30 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"1231
+[u S39 . 1 `S30 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES39  1 e 1 @141 ]
+[s S522 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1293
+[u S531 . 1 `S522 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES531  1 e 1 @145 ]
+[s S194 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1478
+[s S203 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S208 . 1 `S194 1 . 1 0 `S203 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES208  1 e 1 @149 ]
+"1589
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
+"1648
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"1706
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2039
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+[s S729 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"2056
+[u S738 . 1 `S729 1 . 1 0 ]
+[v _LATAbits LATAbits `VES738  1 e 1 @268 ]
+"2096
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+[s S708 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"2113
+[u S717 . 1 `S708 1 . 1 0 ]
+[v _LATBbits LATBbits `VES717  1 e 1 @269 ]
+"2430
+[v _BORCON BORCON `VEuc  1 e 1 @278 ]
+"2779
+[v _APFCON0 APFCON0 `VEuc  1 e 1 @285 ]
+"2841
+[v _APFCON1 APFCON1 `VEuc  1 e 1 @286 ]
+"2861
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2913
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3172
+[v _RCREG RCREG `VEuc  1 e 1 @409 ]
+"3192
+[v _TXREG TXREG `VEuc  1 e 1 @410 ]
+"3228
+[v _SPBRGL SPBRGL `VEuc  1 e 1 @411 ]
+"3278
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @412 ]
+"3311
+[v _RCSTA RCSTA `VEuc  1 e 1 @413 ]
+[s S317 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"3328
+[u S326 . 1 `S317 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES326  1 e 1 @413 ]
+"3373
+[v _TXSTA TXSTA `VEuc  1 e 1 @414 ]
+[s S296 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"3390
+[u S305 . 1 `S296 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES305  1 e 1 @414 ]
+"3435
+[v _BAUDCON BAUDCON `VEuc  1 e 1 @415 ]
+"3487
+[v _WPUA WPUA `VEuc  1 e 1 @524 ]
+"3516
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"3586
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
+"3624
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
+"3700
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
+"3822
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
+[s S51 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"3851
+[s S60 . 1 `uc 1 SSPM 1 0 :4:0 
+]
+[u S62 . 1 `S51 1 . 1 0 `S60 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES62  1 e 1 @533 ]
+"4026
+[v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
+"25 /home/andre/MPLABXProjects/tp10_v1.8.X/main.h
+[v _matrix_conf matrix_conf `DC[12]uc  1 e 12 0 ]
+"47
+[v _T T `uc  1 e 1 0 ]
+"48
+[v _random random `ui  1 e 2 0 ]
+"49
+[v _x x `uc  1 e 1 0 ]
+"50
+[v _y y `uc  1 e 1 0 ]
+"51
+[v _incx incx `uc  1 e 1 0 ]
+"52
+[v _a a `f  1 e 3 0 ]
+"54
+[v _bufferRx bufferRx `uc  1 e 1 0 ]
+[s S673 . 2 `uc 1 b0 1 0 `uc 1 b1 1 1 ]
+"57
+[u S676 . 2 `ui 1 v16 2 0 `S673 1 . 2 0 ]
+[v _address_write address_write `S676  1 e 2 0 ]
+"58
+[v _address_read address_read `S676  1 e 2 0 ]
+[s S238 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
+]
+"52 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/eusart.c
+[u S243 . 1 `S238 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusartRxLastError eusartRxLastError `VES243  1 e 1 0 ]
+"58
+[v _EUSART_FramingErrorHandler EUSART_FramingErrorHandler `*.37(v  1 e 2 0 ]
+"59
+[v _EUSART_OverrunErrorHandler EUSART_OverrunErrorHandler `*.37(v  1 e 2 0 ]
+"60
+[v _EUSART_ErrorHandler EUSART_ErrorHandler `*.37(v  1 e 2 0 ]
+[s S22 . 4 `uc 1 con1 1 0 `uc 1 stat 1 1 `uc 1 add 1 2 `uc 1 operation 1 3 ]
+"58 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/spi1.c
+[v _spi1_configuration spi1_configuration `DC[1]S22  1 s 4 spi1_configuration ]
+"57 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/tmr1.c
+[v _timer1ReloadVal timer1ReloadVal `VEui  1 e 2 0 ]
+"58 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/tmr2.c
+[v _TMR2_InterruptHandler TMR2_InterruptHandler `*.37(v  1 e 2 0 ]
+"245 /home/andre/MPLABXProjects/tp10_v1.8.X/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"283
+[v main@rxChar rxChar `uc  1 a 1 41 ]
+"288
+} 0
+"67
+[v _initMatrix initMatrix `(v  1 e 1 0 ]
+{
+"72
+[v initMatrix@j j `uc  1 a 1 22 ]
+"71
+[v initMatrix@i i `uc  1 a 1 21 ]
+"68
+[v initMatrix@data data `[4]uc  1 a 4 16 ]
+"69
+[v initMatrix@k k `uc  1 a 1 20 ]
+"82
+} 0
+"52
+[v _matrixClear matrixClear `(v  1 e 1 0 ]
+{
+"55
+[v matrixClear@i i `uc  1 a 1 13 ]
+"53
+[v matrixClear@data data `[4]uc  1 a 4 9 ]
+"65
+} 0
+"129
+[v _txSpi txSpi `(v  1 e 1 0 ]
+{
+[v txSpi@cs cs `E2499  1 a 1 wreg ]
+[v txSpi@cs cs `E2499  1 a 1 wreg ]
+[v txSpi@data data `*.4uc  1 p 1 5 ]
+[v txSpi@dataSize dataSize `ui  1 p 2 6 ]
+[v txSpi@cs cs `E2499  1 a 1 8 ]
+"148
+} 0
+"100 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/spi1.c
+[v _SPI1_ExchangeBlock SPI1_ExchangeBlock `(v  1 e 1 0 ]
+{
+[v SPI1_ExchangeBlock@block block `*.4v  1 a 1 wreg ]
+"102
+[v SPI1_ExchangeBlock@data data `*.4uc  1 a 1 4 ]
+"100
+[v SPI1_ExchangeBlock@block block `*.4v  1 a 1 wreg ]
+[v SPI1_ExchangeBlock@blockSize blockSize `ui  1 p 2 0 ]
+"102
+[v SPI1_ExchangeBlock@block block `*.4v  1 a 1 3 ]
+"110
+} 0
+"171 /home/andre/MPLABXProjects/tp10_v1.8.X/main.c
+[v _analisaRx analisaRx `(v  1 e 1 0 ]
+{
+"188
+} 0
+"28 /opt/microchip/xc8/v2.46/pic/sources/c90/common/lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+{
+[v ___lwtoft@c c `ui  1 p 2 8 ]
+"31
+} 0
+"62 /opt/microchip/xc8/v2.46/pic/sources/c90/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 22 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 26 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 25 ]
+[v ___ftmul@exp exp `uc  1 a 1 21 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 11 ]
+[v ___ftmul@f2 f2 `f  1 p 3 14 ]
+"157
+} 0
+"86 /opt/microchip/xc8/v2.46/pic/sources/c90/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 38 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 37 ]
+[v ___ftadd@sign sign `uc  1 a 1 36 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 27 ]
+[v ___ftadd@f2 f2 `f  1 p 3 30 ]
+"148
+} 0
+"62 /opt/microchip/xc8/v2.46/pic/sources/c90/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 0 ]
+[v ___ftpack@exp exp `uc  1 p 1 3 ]
+[v ___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"212 /home/andre/MPLABXProjects/tp10_v1.8.X/main.c
+[v _Ext_Read Ext_Read `(v  1 e 1 0 ]
+{
+[v Ext_Read@addressLow addressLow `uc  1 a 1 wreg ]
+"213
+[v Ext_Read@data data `[4]uc  1 a 4 13 ]
+"212
+[v Ext_Read@addressLow addressLow `uc  1 a 1 wreg ]
+[v Ext_Read@addressHigh addressHigh `uc  1 p 1 11 ]
+"214
+[v Ext_Read@addressLow addressLow `uc  1 a 1 12 ]
+"223
+} 0
+"150
+[v _rxSpi rxSpi `(v  1 e 1 0 ]
+{
+[v rxSpi@cs cs `E2499  1 a 1 wreg ]
+[v rxSpi@cs cs `E2499  1 a 1 wreg ]
+[v rxSpi@block block `*.4v  1 p 1 6 ]
+[v rxSpi@blockSize blockSize `uc  1 p 1 7 ]
+[v rxSpi@cs cs `E2499  1 a 1 10 ]
+"169
+} 0
+"122 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/spi1.c
+[v _SPI1_ReadBlock SPI1_ReadBlock `(v  1 e 1 0 ]
+{
+[v SPI1_ReadBlock@block block `*.4v  1 a 1 wreg ]
+"124
+[v SPI1_ReadBlock@data data `*.4uc  1 a 1 5 ]
+"122
+[v SPI1_ReadBlock@block block `*.4v  1 a 1 wreg ]
+[v SPI1_ReadBlock@blockSize blockSize `ui  1 p 2 1 ]
+"124
+[v SPI1_ReadBlock@block block `*.4v  1 a 1 4 ]
+"129
+} 0
+"92
+[v _SPI1_ExchangeByte SPI1_ExchangeByte `(uc  1 e 1 0 ]
+{
+[v SPI1_ExchangeByte@data data `uc  1 a 1 wreg ]
+[v SPI1_ExchangeByte@data data `uc  1 a 1 wreg ]
+"94
+[v SPI1_ExchangeByte@data data `uc  1 a 1 0 ]
+"98
+} 0
+"132 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/eusart.c
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+{
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 0 ]
+"139
+} 0
+"50 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"60
+} 0
+"72
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"76
+} 0
+"64 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/tmr2.c
+[v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+{
+"85
+} 0
+"132
+[v _TMR2_SetInterruptHandler TMR2_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR2_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"134
+} 0
+"63 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+{
+"84
+} 0
+"62 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/spi1.c
+[v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+{
+"70
+} 0
+"55 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"94
+} 0
+"62 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"70
+} 0
+"66 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+{
+"92
+} 0
+"161
+[v _EUSART_SetOverrunErrorHandler EUSART_SetOverrunErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"163
+} 0
+"157
+[v _EUSART_SetFramingErrorHandler EUSART_SetFramingErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"159
+} 0
+"165
+[v _EUSART_SetErrorHandler EUSART_SetErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"167
+} 0
+"72 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/spi1.c
+[v _SPI1_Open SPI1_Open `(uc  1 e 1 0 ]
+{
+[v SPI1_Open@spi1UniqueConfiguration spi1UniqueConfiguration `E92  1 a 1 wreg ]
+[v SPI1_Open@spi1UniqueConfiguration spi1UniqueConfiguration `E92  1 a 1 wreg ]
+"74
+[v SPI1_Open@spi1UniqueConfiguration spi1UniqueConfiguration `E92  1 a 1 3 ]
+"85
+} 0
+"99 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/eusart.c
+[v _EUSART_is_rx_ready EUSART_is_rx_ready `(uc  1 e 1 0 ]
+{
+"102
+} 0
+"113
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+{
+"130
+} 0
+"52 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+{
+"70
+} 0
+"119 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/tmr2.c
+[v _TMR2_ISR TMR2_ISR `(v  1 e 1 0 ]
+{
+"129
+} 0
+"136
+[v _TMR2_DefaultInterruptHandler TMR2_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"139
+} 0
+"225 /home/andre/MPLABXProjects/tp10_v1.8.X/main.c
+[v _decrementaT decrementaT `(v  1 e 1 0 ]
+{
+"226
+[v decrementaT@CountCallBack CountCallBack `VEui  1 s 2 CountCallBack ]
+"240
+} 0
+"190
+[v _executaTudo executaTudo `(v  1 e 1 0 ]
+{
+"200
+} 0
+"52
+[v i1_matrixClear matrixClear `(v  1 e 1 0 ]
+{
+"53
+[v i1matrixClear@data data `[4]uc  1 a 4 9 ]
+"55
+[v i1matrixClear@i i `uc  1 a 1 13 ]
+"65
+} 0
+"110
+[v _positionUpdate positionUpdate `(v  1 e 1 0 ]
+{
+[v positionUpdate@cordX cordX `uc  1 a 1 wreg ]
+"111
+[v positionUpdate@data data `[4]uc  1 a 4 0 ]
+"110
+[v positionUpdate@cordX cordX `uc  1 a 1 wreg ]
+[v positionUpdate@cordY cordY `uc  1 p 1 9 ]
+"112
+[v positionUpdate@cordX cordX `uc  1 a 1 4 ]
+"126
+} 0
+"84
+[v _positionCalc positionCalc `(v  1 e 1 0 ]
+{
+"85
+[v positionCalc@yi yi `f  1 s 3 yi ]
+"108
+} 0
+"6 /opt/microchip/xc8/v2.46/pic/sources/c90/common/round.c
+[v _round round `(d  1 e 3 0 ]
+{
+"8
+[v round@f f `d  1 a 3 23 ]
+"6
+[v round@x x `d  1 p 3 20 ]
+"13
+} 0
+"13 /opt/microchip/xc8/v2.46/pic/sources/c90/common/trunc.c
+[v _trunc trunc `(d  1 e 3 0 ]
+{
+"15
+[v trunc@i i `d  1 a 3 9 ]
+"16
+[v trunc@expon expon `i  1 a 2 12 ]
+"13
+[v trunc@x x `d  1 p 3 6 ]
+"25
+} 0
+"254 /opt/microchip/xc8/v2.46/pic/sources/c90/common/frexp.c
+[v _frexp frexp `(d  1 e 3 0 ]
+{
+[v frexp@value value `d  1 p 3 0 ]
+[v frexp@eptr eptr `*.4i  1 p 1 3 ]
+"274
+} 0
+"44 /opt/microchip/xc8/v2.46/pic/sources/c90/common/fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 8 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 12 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 7 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 0 ]
+"73
+} 0
+"42 /opt/microchip/xc8/v2.46/pic/sources/c90/common/altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+{
+"44
+[v ___altoft@sign sign `uc  1 a 1 5 ]
+[v ___altoft@exp exp `uc  1 a 1 4 ]
+"42
+[v ___altoft@c c `l  1 p 4 0 ]
+"57
+} 0
+"17 /opt/microchip/xc8/v2.46/pic/sources/c90/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+{
+[v ___ftsub@f2 f2 `f  1 p 3 14 ]
+[v ___ftsub@f1 f1 `f  1 p 3 17 ]
+"26
+} 0
+"86 /opt/microchip/xc8/v2.46/pic/sources/c90/common/ftadd.c
+[v i1___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v i1___ftadd@exp1 exp1 `uc  1 a 1 5 ]
+[v i1___ftadd@exp2 exp2 `uc  1 a 1 4 ]
+[v i1___ftadd@sign sign `uc  1 a 1 3 ]
+"86
+[v i1___ftadd@f1 f1 `f  1 p 3 8 ]
+[v i1___ftadd@f2 f2 `f  1 p 3 11 ]
+"148
+} 0
+"62 /opt/microchip/xc8/v2.46/pic/sources/c90/common/float.c
+[v i1___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v i1___ftpack@arg arg `um  1 p 3 0 ]
+[v i1___ftpack@exp exp `uc  1 p 1 3 ]
+[v i1___ftpack@sign sign `uc  1 p 1 4 ]
+"86
+} 0
+"15 /opt/microchip/xc8/v2.46/pic/sources/c90/common/ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+{
+[v ___ftneg@f1 f1 `f  1 p 3 0 ]
+"20
+} 0
+"202 /home/andre/MPLABXProjects/tp10_v1.8.X/main.c
+[v _Ext_Write Ext_Write `(v  1 e 1 0 ]
+{
+[v Ext_Write@addressLow addressLow `uc  1 a 1 wreg ]
+"203
+[v Ext_Write@data data `[5]uc  1 a 5 1 ]
+"202
+[v Ext_Write@addressLow addressLow `uc  1 a 1 wreg ]
+[v Ext_Write@addressHigh addressHigh `uc  1 p 1 9 ]
+[v Ext_Write@x x `uc  1 p 1 10 ]
+[v Ext_Write@y y `uc  1 p 1 11 ]
+"204
+[v Ext_Write@addressLow addressLow `uc  1 a 1 0 ]
+"210
+} 0
+"129
+[v i1_txSpi txSpi `(v  1 e 1 0 ]
+{
+[v i1txSpi@cs cs `E2499  1 a 1 wreg ]
+[v i1txSpi@cs cs `E2499  1 a 1 wreg ]
+[v i1txSpi@data data `*.4uc  1 p 1 5 ]
+[v i1txSpi@dataSize dataSize `ui  1 p 2 6 ]
+[v i1txSpi@cs cs `E2499  1 a 1 8 ]
+"148
+} 0
+"100 /home/andre/MPLABXProjects/tp10_v1.8.X/mcc_generated_files/spi1.c
+[v i1_SPI1_ExchangeBlock SPI1_ExchangeBlock `(v  1 e 1 0 ]
+{
+[v i1SPI1_ExchangeBlock@block block `*.4v  1 a 1 wreg ]
+"102
+[v i1SPI1_ExchangeBlock@data data `*.4uc  1 a 1 4 ]
+"100
+[v i1SPI1_ExchangeBlock@block block `*.4v  1 a 1 wreg ]
+[v i1SPI1_ExchangeBlock@blockSize blockSize `ui  1 p 2 0 ]
+"102
+[v i1SPI1_ExchangeBlock@block block `*.4v  1 a 1 3 ]
+"110
+} 0

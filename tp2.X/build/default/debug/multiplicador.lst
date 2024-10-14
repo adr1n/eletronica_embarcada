@@ -1,0 +1,212 @@
+
+
+Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
+                                                                                                           Mon Apr 15 10:03:52 2024
+
+
+     1                           	processor	16F887
+     2                           	pagewidth 132
+     3                           	psect	udata_shr,global,class=COMMON,space=1,delta=1,noexec
+     4                           	psect	udata,global,class=RAM,space=1,delta=1,noexec
+     5                           	psect	udata_bank0,global,class=BANK0,space=1,delta=1,noexec
+     6                           	psect	udata_bank1,global,class=BANK1,space=1,delta=1,noexec
+     7                           	psect	udata_bank2,global,class=BANK2,space=1,delta=1,noexec
+     8                           	psect	udata_bank3,global,class=BANK3,space=1,delta=1,noexec
+     9                           	psect	code,global,class=CODE,delta=2
+    10                           	psect	data,global,class=STRCODE,delta=2,noexec
+    11                           	psect	edata,global,class=EEDATA,space=3,delta=2,noexec
+    12                           	psect	resetVec,global,class=CODE,delta=2
+    13                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=2,noexec
+    14                           	psect	pa_nodes0,global,class=CODE,delta=2
+    15     018D                     
+    16                           	psect	udata_shr
+    17     0070                     regA:
+    18     0070                     	ds	1
+    19     0071                     regB:
+    20     0071                     	ds	1
+    21     0072                     storeA:
+    22     0072                     	ds	1
+    23     0073                     storeB:
+    24     0073                     	ds	1
+    25     0074                     result_msb:
+    26     0074                     	ds	1
+    27     0075                     result_lsb:
+    28     0075                     	ds	1
+    29     0076                     i:
+    30     0076                     	ds	1
+    31     0077                     bank:
+    32     0077                     	ds	1
+    33                           
+    34                           	psect	code
+    35     07AC                     start:
+    36     07AC  1703 1683          	banksel	392	;Setando entradas e saídas digitais
+    37     07AE  0188               	clrf	392
+    38     07AF  1703 1683          	banksel	393
+    39     07B1  0189               	clrf	393
+    40     07B2  3020               	movlw	32	;Setando o valor inicial do contador de endereços
+    41     07B3  00F7               	movwf	bank
+    42     07B4                     pin_config:
+    43     07B4  1303 1683          	banksel	129
+    44     07B6  1381               	bcf	129,7
+    45     07B7  1303 1683          	banksel	133	;Setando trisA e trisC como saídas
+    46     07B9  0185               	clrf	133
+    47     07BA  0187               	clrf	135
+    48     07BB  30FF               	movlw	255	;Setando trisB e trisD como entradas
+    49     07BC  0086               	movwf	134
+    50     07BD  0088               	movwf	136
+    51     07BE                     get_values:
+    52     07BE  1303 1283          	banksel	6
+    53     07C0  0806               	movf	6,w
+    54     07C1  00F0               	movwf	regA	;Colocando os valores nos registradores de
+    55     07C2  00F2               	movwf	storeA	;trabalho e armazenamento citados anteriormente
+    56     07C3  0808               	movf	8,w
+    57     07C4  00F1               	movwf	regB
+    58     07C5  00F3               	movwf	storeB
+    59     07C6  0064               	clrwdt
+    60     07C7                     bit_verification:
+    61     07C7  1809               	btfsc	9,0	;Verificando qual multiplicaçao deve ser feita
+    62     07C8  2FD1               	goto	mult_shift	;((PORTE) and 07Fh), 0=0: Somas sucessivas, ((PORTE) and 07Fh), 0=1: Soma e desloca
+      +                          mento
+    63     07C9                     mult_sum:
+    64     07C9  0871               	movf	regB,w	;W = b
+    65     07CA  07F5               	addwf	result_lsb,f	;result_lsb = result_lsb + W
+    66     07CB  1C03               	btfss	3,0	;se a soma der um carry, pula uma instrução
+    67     07CC  2FAE               	goto	($+2)
+    68     07CD  0AF4               	incf	result_msb,f	;result_msb = result_msb + carry
+    69     07CE  0BF0               	decfsz	regA,f
+    70     07CF  2FC9               	goto	mult_sum
+    71     07D0  2FDE               	goto	store_result
+    72     07D1                     mult_shift:
+    73     07D1  0064               	clrwdt
+    74     07D2  3008               	movlw	8
+    75     07D3  00F6               	movwf	i	;Setando o numero 8 no contador
+    76     07D4                     mult_loop:
+    77     07D4  0CF0               	rrf	regA,f	;Deslocando A para saber se soma ou passa
+    78     07D5  1C03               	btfss	3,0	;Se carry for 1: Soma e desloca
+    79     07D6  2FAF               	goto	($+3)	;Se carry=0, apenas desloca
+    80     07D7  0871               	movf	regB,w
+    81     07D8  07F4               	addwf	result_msb,f
+    82     07D9                     shift_prod:
+    83     07D9  1003               	bcf	3,0	;Zerando a flag carry para nao interferir no rotate
+    84     07DA  0CF4               	rrf	result_msb,f	;Desloca-se à direita para obter o resultado em 16 bits
+    85     07DB  0CF5               	rrf	result_lsb,f
+    86     07DC  0BF6               	decfsz	i,f	;Se i chegar a 0, a iteração acaba
+    87     07DD  2FD4               	goto	mult_loop
+    88     07DE                     store_result:
+    89     07DE  0064               	clrwdt
+    90     07DF                     overflow_test:
+    91                           
+    92                           ;Essa label testa se bank já chegou a 6F, para resetá-lo.
+    93     07DF  306F               	movlw	111
+    94     07E0  0677               	xorwf	bank,w
+    95     07E1  1D03               	btfss	3,2	;se bank == 0x6F, flag Z é ativada
+    96     07E2  2FE5               	goto	iteration_address
+    97     07E3  3020               	movlw	32	;Reseta valor de bank para 0x20
+    98     07E4  00F7               	movwf	bank
+    99     07E5                     iteration_address:
+   100     07E5  0183               	clrf	3	;Como irei usar endereçamento indireto, melhor limpar o STATUS
+   101     07E6  0877               	movf	bank,w
+   102     07E7  0084               	movwf	4	;FSR <= bank
+   103     07E8  1383               	bcf	3,7	;Escreverei nos bancos 0 e 1 agora
+   104     07E9  1384               	bcf	4,7	;Selecionando o banco 0
+   105     07EA  0872               	movf	storeA,w
+   106     07EB  0080               	movwf	0
+   107     07EC  1784               	bsf	4,7	;Selecionando o banco 1
+   108     07ED  0873               	movf	storeB,w
+   109     07EE  0080               	movwf	0
+   110     07EF  1783               	bsf	3,7	;Escreverei nos bancos 2 e 3 agora
+   111     07F0  1384               	bcf	4,7	;Selecionando o banco 2
+   112     07F1  0875               	movf	result_lsb,w
+   113     07F2  0080               	movwf	0
+   114     07F3  1784               	bsf	4,7	;Selecionando o banco 3
+   115     07F4  0874               	movf	result_msb,w
+   116     07F5  0080               	movwf	0
+   117     07F6  0AF7               	incf	bank,f	;bank <= bank + 1
+   118     07F7                     show_result:
+   119     07F7  1303 1283          	banksel	5
+   120     07F9  0875               	movf	result_lsb,w
+   121     07FA  0085               	movwf	5
+   122     07FB  01F5               	clrf	result_lsb
+   123     07FC  0874               	movf	result_msb,w
+   124     07FD  0087               	movwf	7
+   125     07FE  01F4               	clrf	result_msb
+   126     07FF  2FBE               	goto	get_values
+   127                           
+   128                           	psect	edata
+   129     0000                     stk_offset	set	0
+   130     0000                     auto_size	set	0
+   131                           
+   132                           ; stack_auto defines a symbol /name/_offset which equates to the
+   133                           ; stack offset of the auto object in question
+   134     0000                     
+   135                           ; stack_param defines a symbol /name/_offset which equates to the
+   136                           ; stack offset of the parameter object in question
+   137     0000                     
+   138                           ; alloc_stack adjusts the SP to allocate space for auto objects
+   139                           ; it also links in to the btemp symbol so that can be used
+   140     0000                     
+   141                           ; restore_stack adjusts the SP to remove all auto and parameter
+   142                           ; objects from the stack prior to returning from a function
+   143     0000                     	;contador de endereços
+   144     0008                     	;numero de iteracoes na multiplicaçao com deslocamento
+   145                           
+   146                           	psect	resetVec
+   147     07AB                     resetVec:
+   148     07AB                     	pagesel	start
+   149     07AB  2FAC               	goto	start
+   150                           
+   151                           	psect	config
+   152                           
+   153                           ;Config register CONFIG1 @ 0x2007
+   154                           ;	Oscillator Selection bits
+   155                           ;	FOSC = INTRC_NOCLKOUT, INTOSCIO oscillator: I/O function on RA6/OSC2/CLKOUT pin, I/O function on R
+      +                          A7/OSC1/CLKIN
+   156                           ;	Watchdog Timer Enable bit
+   157                           ;	WDTE = 0x1, unprogrammed default
+   158                           ;	Power-up Timer Enable bit
+   159                           ;	PWRTE = 0x1, unprogrammed default
+   160                           ;	RE3/MCLR pin function select bit
+   161                           ;	MCLRE = 0x1, unprogrammed default
+   162                           ;	Code Protection bit
+   163                           ;	CP = 0x1, unprogrammed default
+   164                           ;	Data Code Protection bit
+   165                           ;	CPD = 0x1, unprogrammed default
+   166                           ;	Brown Out Reset Selection bits
+   167                           ;	BOREN = 0x3, unprogrammed default
+   168                           ;	Internal External Switchover bit
+   169                           ;	IESO = 0x1, unprogrammed default
+   170                           ;	Fail-Safe Clock Monitor Enabled bit
+   171                           ;	FCMEN = 0x1, unprogrammed default
+   172                           ;	Low Voltage Programming Enable bit
+   173                           ;	LVP = 0x1, unprogrammed default
+   174                           ;	In-Circuit Debugger Mode bit
+   175                           ;	DEBUG = 0x1, unprogrammed default
+   176     2007                     	org	8199
+   177     2007  3FFC               	dw	16380
+   178                           
+   179                           ;Config register CONFIG2 @ 0x2008
+   180                           ;	unspecified, using default values
+   181                           ;	Brown-out Reset Selection bit
+   182                           ;	BOR4V = 0x1, unprogrammed default
+   183                           ;	Flash Program Memory Self Write Enable bits
+   184                           ;	WRT = 0x3, unprogrammed default
+   185     2008                     	org	8200
+   186     2008  3FFF               	dw	16383
+
+
+Microchip Technology PIC Macro Assembler V2.46 build 20240104201356 
+Symbol Table                                                                                               Mon Apr 15 10:03:52 2024
+
+                            i 0076                            FSR 0004                           INDF 0000  
+                         bank 0077                           regA 0070                           regB 0071  
+                        ANSEL 0188                          PORTA 0005                          PORTB 0006  
+                        PORTC 0007                          PORTD 0008                          PORTE 0009  
+                        TRISA 0085                          TRISB 0086                          TRISC 0087  
+                        TRISD 0088                          start 07AC                         ANSELH 0189  
+                overflow_test 07DF                         STATUS 0003                         storeA 0072  
+                       storeB 0073               bit_verification 07C7                        valor_i 0008  
+                   OPTION_REG 0081                       resetVec 07AB                       mult_sum 07C9  
+            iteration_address 07E5                   store_result 07DE                     get_values 07BE  
+                  show_result 07F7                     pin_config 07B4                     shift_prod 07D9  
+                   result_lsb 0075                     result_msb 0074                     mult_shift 07D1  
+                    mult_loop 07D4  

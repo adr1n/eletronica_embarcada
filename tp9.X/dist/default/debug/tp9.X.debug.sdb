@@ -1,0 +1,426 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1827 ]
+[d frameptr 6 ]
+"10 /opt/microchip/xc8/v2.46/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 /opt/microchip/xc8/v2.46/pic/sources/c99/common/Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"4 /opt/microchip/xc8/v2.46/pic/sources/c99/common/Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 /opt/microchip/xc8/v2.46/pic/sources/c99/pic/__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"104
+[v ___eetoc __eetoc `(uc  1 e 1 0 ]
+"150
+[v ___ctoee __ctoee `(uc  1 e 1 0 ]
+"204 /home/andre/MPLABXProjects/tp9_mod/tp9.X/main.c
+[v _enviaMsg enviaMsg `(v  1 e 1 0 ]
+"212
+[v _enviaNomes enviaNomes `(v  1 e 1 0 ]
+"231
+[v _recebeGuardaNome recebeGuardaNome `(v  1 e 1 0 ]
+"260
+[v _analisaRx analisaRx `(v  1 e 1 0 ]
+"312
+[v _main main `(v  1 e 1 0 ]
+"66 /home/andre/MPLABXProjects/tp9_mod/tp9.X/mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+"99
+[v _EUSART_is_rx_ready EUSART_is_rx_ready `(a  1 e 1 0 ]
+"113
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+"132
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+"144
+[v _EUSART_DefaultFramingErrorHandler EUSART_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+"146
+[v _EUSART_DefaultOverrunErrorHandler EUSART_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+"154
+[v _EUSART_DefaultErrorHandler EUSART_DefaultErrorHandler `(v  1 e 1 0 ]
+"157
+[v _EUSART_SetFramingErrorHandler EUSART_SetFramingErrorHandler `(v  1 e 1 0 ]
+"161
+[v _EUSART_SetOverrunErrorHandler EUSART_SetOverrunErrorHandler `(v  1 e 1 0 ]
+"165
+[v _EUSART_SetErrorHandler EUSART_SetErrorHandler `(v  1 e 1 0 ]
+"50 /home/andre/MPLABXProjects/tp9_mod/tp9.X/mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"59
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"73
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+"58 /home/andre/MPLABXProjects/tp9_mod/tp9.X/mcc_generated_files/memory.c
+[v _FLASH_ReadWord FLASH_ReadWord `(us  1 e 2 0 ]
+"95
+[v _FLASH_WriteBlock FLASH_WriteBlock `(c  1 e 1 0 ]
+"156
+[v _FLASH_EraseBlock FLASH_EraseBlock `(v  1 e 1 0 ]
+"55 /home/andre/MPLABXProjects/tp9_mod/tp9.X/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+[s S448 . 1 `uc 1 C 1 0 :1:0 
+`uc 1 DC 1 0 :1:1 
+`uc 1 Z 1 0 :1:2 
+`uc 1 nPD 1 0 :1:3 
+`uc 1 nTO 1 0 :1:4 
+]
+"131 /opt/microchip/mplabx/v6.20/packs/Microchip/PIC12-16F1xxx_DFP/1.7.242/xc8/pic/include/proc/pic16f1827.h
+[s S454 . 1 `uc 1 CARRY 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ZERO 1 0 :1:2 
+]
+[u S458 . 1 `S448 1 . 1 0 `S454 1 . 1 0 ]
+[v _STATUSbits STATUSbits `VES458  1 e 1 @3 ]
+[s S22 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374
+[s S31 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S36 . 1 `S22 1 . 1 0 `S31 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES36  1 e 1 @11 ]
+[s S186 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"570
+[u S195 . 1 `S186 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES195  1 e 1 @17 ]
+"1152
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1214
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+[s S339 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1478
+[s S348 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S353 . 1 `S339 1 . 1 0 `S348 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES353  1 e 1 @149 ]
+"1589
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
+"1648
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"1706
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2039
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"2096
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2430
+[v _BORCON BORCON `VEuc  1 e 1 @278 ]
+"2779
+[v _APFCON0 APFCON0 `VEuc  1 e 1 @285 ]
+"2841
+[v _APFCON1 APFCON1 `VEuc  1 e 1 @286 ]
+"2861
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2913
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"2978
+[v _EEADR EEADR `VEus  1 e 2 @401 ]
+"2985
+[v _EEADRL EEADRL `VEuc  1 e 1 @401 ]
+"3005
+[v _EEADRH EEADRH `VEuc  1 e 1 @402 ]
+"3032
+[v _EEDATL EEDATL `VEuc  1 e 1 @403 ]
+"3037
+[v _EEDATA EEDATA `VEuc  1 e 1 @403 ]
+"3070
+[v _EEDATH EEDATH `VEuc  1 e 1 @404 ]
+"3090
+[v _EECON1 EECON1 `VEuc  1 e 1 @405 ]
+[s S56 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 FREE 1 0 :1:4 
+`uc 1 LWLO 1 0 :1:5 
+`uc 1 CFGS 1 0 :1:6 
+`uc 1 EEPGD 1 0 :1:7 
+]
+"3107
+[u S65 . 1 `S56 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES65  1 e 1 @405 ]
+"3152
+[v _EECON2 EECON2 `VEuc  1 e 1 @406 ]
+"3172
+[v _RCREG RCREG `VEuc  1 e 1 @409 ]
+"3192
+[v _TXREG TXREG `VEuc  1 e 1 @410 ]
+"3228
+[v _SPBRGL SPBRGL `VEuc  1 e 1 @411 ]
+"3278
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @412 ]
+"3311
+[v _RCSTA RCSTA `VEuc  1 e 1 @413 ]
+[s S228 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"3328
+[u S237 . 1 `S228 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES237  1 e 1 @413 ]
+"3373
+[v _TXSTA TXSTA `VEuc  1 e 1 @414 ]
+[s S207 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"3390
+[u S216 . 1 `S207 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES216  1 e 1 @414 ]
+"3435
+[v _BAUDCON BAUDCON `VEuc  1 e 1 @415 ]
+"3487
+[v _WPUA WPUA `VEuc  1 e 1 @524 ]
+"3516
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"7616
+[v _PLLR PLLR `VEb  1 e 0 @1238 ]
+[s S383 . 22 `uc 1 estado 1 0 `[21]uc 1 name 21 1 ]
+"190 /home/andre/MPLABXProjects/tp9_mod/tp9.X/main.c
+[v _ee ee `VE[10]S383  1 e 220 0 ]
+"192
+[v _msg1 msg1 `DC[22]uc  1 e 22 0 ]
+"193
+[v _msg2 msg2 `DC[28]uc  1 e 28 0 ]
+"194
+[v _msg3 msg3 `DC[9]uc  1 e 9 0 ]
+"196
+[v _msg5 msg5 `DC[38]uc  1 e 38 0 ]
+"197
+[v _msg6 msg6 `DC[38]uc  1 e 38 0 ]
+"198
+[v _msg7 msg7 `DC[36]uc  1 e 36 0 ]
+"200
+[v _countName countName `uc  1 e 1 0 ]
+"201
+[v _countRx countRx `uc  1 e 1 0 ]
+"202
+[v _bufferRx bufferRx `uc  1 e 1 0 ]
+[s S140 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
+]
+"52 /home/andre/MPLABXProjects/tp9_mod/tp9.X/mcc_generated_files/eusart.c
+[u S145 . 1 `S140 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusartRxLastError eusartRxLastError `VES145  1 e 1 0 ]
+"58
+[v _EUSART_FramingErrorHandler EUSART_FramingErrorHandler `*.37(v  1 e 2 0 ]
+"59
+[v _EUSART_OverrunErrorHandler EUSART_OverrunErrorHandler `*.37(v  1 e 2 0 ]
+"60
+[v _EUSART_ErrorHandler EUSART_ErrorHandler `*.37(v  1 e 2 0 ]
+"312 /home/andre/MPLABXProjects/tp9_mod/tp9.X/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"335
+[v main@rxChar rxChar `uc  1 a 1 12 ]
+"344
+} 0
+"260
+[v _analisaRx analisaRx `(v  1 e 1 0 ]
+{
+"283
+[v analisaRx@j j `i  1 a 2 6 ]
+"299
+[v analisaRx@i_424 i `i  1 a 2 8 ]
+"277
+[v analisaRx@i i `i  1 a 2 10 ]
+"310
+} 0
+"231
+[v _recebeGuardaNome recebeGuardaNome `(v  1 e 1 0 ]
+{
+"237
+[v recebeGuardaNome@rxChar rxChar `uc  1 a 1 9 ]
+"233
+[v recebeGuardaNome@countByte countByte `uc  1 a 1 10 ]
+"232
+[v recebeGuardaNome@nameRx nameRx `[21]uc  1 s 21 nameRx ]
+"258
+} 0
+"204
+[v _enviaMsg enviaMsg `(v  1 e 1 0 ]
+{
+"205
+[v enviaMsg@i i `uc  1 a 1 6 ]
+"204
+[v enviaMsg@msg msg `*.25DCuc  1 p 2 1 ]
+"211
+} 0
+"150 /opt/microchip/xc8/v2.46/pic/sources/c99/pic/__eeprom.c
+[v ___ctoee __ctoee `(uc  1 e 1 0 ]
+{
+[v ___ctoee@addr addr `*.28VEv  1 a 1 wreg ]
+[v ___ctoee@addr addr `*.28VEv  1 a 1 wreg ]
+[v ___ctoee@data data `uc  1 p 1 6 ]
+"152
+[v ___ctoee@addr addr `*.28VEv  1 a 1 7 ]
+"154
+} 0
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+{
+[v ___memcpyee@to to `*.28VEuc  1 a 1 wreg ]
+"41
+[v ___memcpyee@ptr ptr `*.1DCuc  1 a 1 4 ]
+"39
+[v ___memcpyee@to to `*.28VEuc  1 a 1 wreg ]
+[v ___memcpyee@from from `*.1DCuc  1 p 1 0 ]
+[v ___memcpyee@size size `uc  1 p 1 1 ]
+"41
+[v ___memcpyee@to to `*.28VEuc  1 a 1 5 ]
+"101
+} 0
+"99 /home/andre/MPLABXProjects/tp9_mod/tp9.X/mcc_generated_files/eusart.c
+[v _EUSART_is_rx_ready EUSART_is_rx_ready `(a  1 e 1 0 ]
+{
+"102
+} 0
+"113
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+{
+"130
+} 0
+"212 /home/andre/MPLABXProjects/tp9_mod/tp9.X/main.c
+[v _enviaNomes enviaNomes `(v  1 e 1 0 ]
+{
+"224
+[v enviaNomes@j_411 j `i  1 a 2 2 ]
+"217
+[v enviaNomes@j j `i  1 a 2 0 ]
+"213
+[v enviaNomes@i i `i  1 a 2 4 ]
+"229
+} 0
+"104 /opt/microchip/xc8/v2.46/pic/sources/c99/pic/__eeprom.c
+[v ___eetoc __eetoc `(uc  1 e 1 0 ]
+{
+[v ___eetoc@addr addr `*.28VEv  1 a 1 wreg ]
+"106
+[v ___eetoc@data data `uc  1 a 1 7 ]
+"104
+[v ___eetoc@addr addr `*.28VEv  1 a 1 wreg ]
+"107
+[v ___eetoc@addr addr `*.28VEv  1 a 1 6 ]
+"109
+} 0
+"6
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+{
+[v ___eecpymem@to to `*.1VEuc  1 a 1 wreg ]
+"8
+[v ___eecpymem@cp cp `*.1VEuc  1 a 1 4 ]
+"6
+[v ___eecpymem@to to `*.1VEuc  1 a 1 wreg ]
+[v ___eecpymem@from from `*.28VEuc  1 p 1 0 ]
+[v ___eecpymem@size size `uc  1 p 1 1 ]
+"8
+[v ___eecpymem@to to `*.1VEuc  1 a 1 5 ]
+"36
+} 0
+"4 /opt/microchip/xc8/v2.46/pic/sources/c99/common/Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+{
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v ___bmul@product product `uc  1 a 1 2 ]
+"4
+[v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 0 ]
+"6
+[v ___bmul@multiplier multiplier `uc  1 a 1 3 ]
+"51
+} 0
+"132 /home/andre/MPLABXProjects/tp9_mod/tp9.X/mcc_generated_files/eusart.c
+[v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
+{
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 wreg ]
+[v EUSART_Write@txData txData `uc  1 a 1 0 ]
+"139
+} 0
+"50 /home/andre/MPLABXProjects/tp9_mod/tp9.X/mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"57
+} 0
+"73
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"77
+} 0
+"55 /home/andre/MPLABXProjects/tp9_mod/tp9.X/mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"94
+} 0
+"59 /home/andre/MPLABXProjects/tp9_mod/tp9.X/mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"71
+} 0
+"66 /home/andre/MPLABXProjects/tp9_mod/tp9.X/mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+{
+"92
+} 0
+"161
+[v _EUSART_SetOverrunErrorHandler EUSART_SetOverrunErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"163
+} 0
+"157
+[v _EUSART_SetFramingErrorHandler EUSART_SetFramingErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"159
+} 0
+"165
+[v _EUSART_SetErrorHandler EUSART_SetErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+"167
+} 0
